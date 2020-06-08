@@ -30,8 +30,13 @@ body {
 }
 
 .nav-on-scroll {
-    position: sticky;
+    position: fixed;
     top: 0;
+    z-index: 2;
+}
+
+.last-name-on-scroll {
+    color: #0066ff;
 }
 
 .nav-container {
@@ -278,7 +283,7 @@ body {
 #landing {
     width: 100%;
     background-color: var(--primary-color);
-    padding: 25px 4% 0 4%;
+    padding: 80px 4% 0 4%;
 }
 
 .nav-above-landing {
@@ -302,6 +307,7 @@ body {
 
 .content-left {
     width: 30%;
+    align-items: flex-start;
 }
 
 .content-left .text-info {
@@ -313,6 +319,7 @@ body {
 .image-right {
     position: relative;
     left: 3%;
+    z-index: 0;
 }
 
 .image-right img {
@@ -336,4 +343,223 @@ body {
 
 .call-t-a p {
     margin: 15px 0;
+}
+
+#plans {
+    width: 100%;
+}
+
+.plans-container {
+    width: 100%;
+    padding: 60px 8% 0 8%;
+    justify-content: flex-start;
+}
+
+.plans-heading {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.plans-heading h1 {
+    font: 500 45px "Play";
+}
+
+.bill-type {
+    width: 100%;
+    justify-content: flex-start;
+    margin: 10px 0px 50px 0px;
+}
+
+.bill-type .monthly {
+    margin-right: 50px;
+}
+
+.radio-btn {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #fbfbfb;
+    border: 1px solid rgb(155, 155, 155);
+    margin-right: 15px;
+}
+
+.on-checked-radio {
+    border: 5px solid #0061ff;
+}
+
+.plans {
+    width: 100%;
+}
+
+.top-3 {
+    width: 100%;
+    align-items: flex-start;
+}
+
+.individual {
+    width: 29.5%;
+    border: 1px solid #c3c3c3;
+    height: 880px;
+    justify-content: flex-start;
+}
+
+.individual .type-head {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.type-head img {
+    margin-right: 10px;
+}
+
+.type-head p {
+    font-size: 1.1rem;
+}
+
+.specific {
+    width: 100%;
+    padding: 30px 20px;
+    align-items: flex-start;
+}
+
+.specific h3 {
+    margin: 18px 0;
+}
+
+.features {
+    width: 100%;
+    padding: 5px 20px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.features .ff {
+    margin: 10px 0;
+}
+
+.features .ff img {
+    margin-right: 10px;
+}
+
+.features .ff p {
+    font-size: 15px;
+}
+
+.cta-plan {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.cta-plan button {
+    width: 100%;
+    padding: 15px 10px;
+    background-color: #0061ff;
+    color: #fbfbfb;
+    border: none;
+}
+
+.cta-plan p {
+    margin: 30px 0;
+    font-size: 16px;
+}
+
+.line-container {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.line-container .line {
+    width: 30%;
+    margin: 10px 0;
+    height: 1px;
+    background-color: rgb(155, 155, 155);
+}
+
+.plan-highlight {
+    width: 100%;
+    padding: 0 20px;
+    align-items: flex-start;
+    margin: 30px 0;
+    margin-bottom: 30px;
+}
+
+.plan-highlight h2 {
+    font-size: 18px;
+}
+
+.highlights {
+    width: 100%;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.light {
+    width: 100%;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.tick {
+    width: 14px;
+    height: 7px;
+    border-left: 2px solid #0061ff;
+    border-bottom: 2px solid #0061ff;
+    transform: rotate(-45deg);
+    margin: 10px 10px 10px 0px;
+}
+
+.tick-txt {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.top-3 .individual:nth-child(2) {
+    margin: 0 5.8%;
+}
+
+.last {
+    width: 100%;
+    border: 1px solid #c3c3c3;
+    margin-top: 30px;
+}
+
+.enter-content {
+    width: 100%;
+    padding: 20px;
+    justify-content: flex-start;
+}
+
+.enter-heading {
+    width: 100%;
+    padding: 10px;
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.left-en-ss {
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.left-en-ss h4 {
+    margin: 20px 0;
+}
+
+.left-en-ss p {
+    font-size: 14px;
+}
+
+.right-en-ss {
+    height: 90px;
+    width: 48%;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.right-en-ss button {
+    height: 45px;
+    width: 180px;
+    border: none;
+    background-color: #0061ff;
+    color: #fbfbfb;
 }

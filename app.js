@@ -13,6 +13,8 @@ const hamWrapper = document.querySelector(".wrapper");
 const landingParent = document.querySelector("#landing");
 const lastName = document.querySelector(".last-name");
 const iconSVG = document.querySelector(".icon-svg path");
+const monthlyBtn = document.querySelector(".monthly .radio-btn");
+const yearlyBtn = document.querySelector(".yearly .radio-btn");
 
 window.addEventListener("scroll", () => {
     if (window.scrollY > 15) {
@@ -20,11 +22,13 @@ window.addEventListener("scroll", () => {
         navBar.classList.add("nav-on-scroll");
         iconSVG.classList.add("svg-scrolled");
         callToActionBtn.classList.add("button-white");
+        lastName.classList.add("last-name-on-scroll");
     } else if (window.scrollY < 15) {
         navBarContainer.classList.remove("nav-white");
         navBar.classList.add("nav-on-scroll");
         iconSVG.classList.remove("svg-scrolled");
         callToActionBtn.classList.remove("button-white");
+        lastName.classList.remove("last-name-on-scroll");
     }
 });
 
@@ -43,9 +47,11 @@ hamMenuBtn.addEventListener("click", () => {
     ) {
         navBarContainer.classList.add("nav-white");
         callToActionBtn.classList.add("button-white");
+        lastName.classList.add("last-name-on-scroll");
     } else {
         navBarContainer.classList.remove("nav-white");
         callToActionBtn.classList.remove("button-white");
+        lastName.classList.remove("last-name-on-scroll");
     }
     landingParent.classList.toggle("nav-above-landing");
     document.querySelector("body").classList.toggle("hide-overflow-y");
@@ -94,3 +100,15 @@ const triggerAt800px = (navBarDOMAt800) => {
 let navBarDOMAt800 = window.matchMedia("(max-width: 800px)");
 triggerAt800px(navBarDOMAt800);
 navBarDOMAt800.addListener(triggerAt800px);
+
+// Radio-btn-logic
+
+monthlyBtn.addEventListener("click", () => {
+    monthlyBtn.classList.add("on-checked-radio");
+    yearlyBtn.classList.remove("on-checked-radio");
+});
+
+yearlyBtn.addEventListener("click", () => {
+    yearlyBtn.classList.add("on-checked-radio");
+    monthlyBtn.classList.remove("on-checked-radio");
+});
